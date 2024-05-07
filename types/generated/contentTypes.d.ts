@@ -863,6 +863,48 @@ export interface ApiAcademicStaffAcademicStaff extends Schema.CollectionType {
   };
 }
 
+export interface ApiAnnualReviewExcersiseRecommendationAnnualReviewExcersiseRecommendation
+  extends Schema.CollectionType {
+  collectionName: 'annual_review_excersise_recommendations';
+  info: {
+    singularName: 'annual-review-excersise-recommendation';
+    pluralName: 'annual-review-excersise-recommendations';
+    displayName: 'AnnualReviewExcersiseRecommendation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    collegeName: Attribute.String;
+    departmentName: Attribute.String;
+    nameInFull: Attribute.String;
+    qualificationsWithDates: Attribute.String;
+    dateOfAssumptionOfDuty: Attribute.String;
+    statusOnFirstAppointment: Attribute.String;
+    dateOfConfirmationOfAppointment: Attribute.String;
+    progressionSinceFirstAppointmentAndDate: Attribute.String;
+    presentPositionAndDateOfAttainment: Attribute.String;
+    numberOfPublications: Attribute.String;
+    postToWhichRecommended1: Attribute.String;
+    remarks: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::annual-review-excersise-recommendation.annual-review-excersise-recommendation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::annual-review-excersise-recommendation.annual-review-excersise-recommendation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNonAcademicJuniorStaffNonAcademicJuniorStaff
   extends Schema.CollectionType {
   collectionName: 'non_academic_junior_staffs';
@@ -1061,6 +1103,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::academic-staff.academic-staff': ApiAcademicStaffAcademicStaff;
+      'api::annual-review-excersise-recommendation.annual-review-excersise-recommendation': ApiAnnualReviewExcersiseRecommendationAnnualReviewExcersiseRecommendation;
       'api::non-academic-junior-staff.non-academic-junior-staff': ApiNonAcademicJuniorStaffNonAcademicJuniorStaff;
       'api::non-academic-senior-staff.non-academic-senior-staff': ApiNonAcademicSeniorStaffNonAcademicSeniorStaff;
       'api::review-exercise-sheet1.review-exercise-sheet1': ApiReviewExerciseSheet1ReviewExerciseSheet1;

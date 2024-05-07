@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annual_review_excersise_recommendations",
+  "info": {
+    "singularName": "annual-review-excersise-recommendation",
+    "pluralName": "annual-review-excersise-recommendations",
+    "displayName": "AnnualReviewExcersiseRecommendation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "collegeName": {
+      "type": "string"
+    },
+    "departmentName": {
+      "type": "string"
+    },
+    "nameInFull": {
+      "type": "string"
+    },
+    "qualificationsWithDates": {
+      "type": "string"
+    },
+    "dateOfAssumptionOfDuty": {
+      "type": "string"
+    },
+    "statusOnFirstAppointment": {
+      "type": "string"
+    },
+    "dateOfConfirmationOfAppointment": {
+      "type": "string"
+    },
+    "progressionSinceFirstAppointmentAndDate": {
+      "type": "string"
+    },
+    "presentPositionAndDateOfAttainment": {
+      "type": "string"
+    },
+    "numberOfPublications": {
+      "type": "string"
+    },
+    "postToWhichRecommended1": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "string"
+    }
+  }
+}
