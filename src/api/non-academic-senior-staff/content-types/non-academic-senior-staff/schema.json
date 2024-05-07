@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "non_academic_senior_staffs",
+  "info": {
+    "singularName": "non-academic-senior-staff",
+    "pluralName": "non-academic-senior-staffs",
+    "displayName": "NonAcademicSeniorStaff"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "placeOfBirth": {
+      "type": "string",
+      "required": true
+    },
+    "stateOfOrigin": {
+      "type": "string",
+      "required": true
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "maritalStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Single",
+        "Married",
+        "Divorced"
+      ]
+    },
+    "spouseNameAddress": {
+      "type": "text"
+    },
+    "childrenAges": {
+      "type": "string"
+    },
+    "nextOfKinNameAddress": {
+      "type": "text"
+    },
+    "contactAddress": {
+      "type": "text"
+    },
+    "telephoneNumbers": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "department": {
+      "type": "string"
+    },
+    "dateOfFirstAppointment": {
+      "type": "date"
+    },
+    "confirmationDate": {
+      "type": "date"
+    },
+    "presentPosition": {
+      "type": "string"
+    },
+    "institutionAttended": {
+      "type": "string"
+    },
+    "presentGrade": {
+      "type": "string"
+    },
+    "academicQualifications": {
+      "type": "string"
+    },
+    "professionalQualifications": {
+      "type": "text"
+    },
+    "professionalBodies": {
+      "type": "text"
+    },
+    "workExperience": {
+      "type": "text"
+    },
+    "publications": {
+      "type": "string"
+    },
+    "trainingProgrammes": {
+      "type": "text"
+    },
+    "conferencesAttended": {
+      "type": "text"
+    },
+    "extraCurricularActivities": {
+      "type": "text"
+    },
+    "review_exercise_sheet_1": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::review-exercise-sheet1.review-exercise-sheet1",
+      "mappedBy": "non_academic_senior_staff"
+    }
+  }
+}

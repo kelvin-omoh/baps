@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review_exercise_sheet1s",
+  "info": {
+    "singularName": "review-exercise-sheet1",
+    "pluralName": "review-exercise-sheet1s",
+    "displayName": "ReviewExerciseSheet1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "collegeName": {
+      "type": "string",
+      "required": true
+    },
+    "departmentName": {
+      "type": "string",
+      "required": true
+    },
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "qualifications": {
+      "type": "text"
+    },
+    "assumptionOfDuty": {
+      "type": "text"
+    },
+    "progress": {
+      "type": "string"
+    },
+    "presentPosition": {
+      "type": "string",
+      "required": true
+    },
+    "recommendedPost": {
+      "type": "text"
+    },
+    "publications": {
+      "type": "string"
+    },
+    "presentSalary": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "teaching": {
+      "type": "text"
+    },
+    "research": {
+      "type": "text"
+    },
+    "service": {
+      "type": "text"
+    },
+    "recommendation": {
+      "type": "text"
+    },
+    "academic_staff": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::academic-staff.academic-staff",
+      "inversedBy": "review_exercise_sheet_1"
+    },
+    "non_academic_junior_staff": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::non-academic-junior-staff.non-academic-junior-staff",
+      "inversedBy": "review_exercise_sheet_1"
+    },
+    "non_academic_senior_staff": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::non-academic-senior-staff.non-academic-senior-staff",
+      "inversedBy": "review_exercise_sheet_1"
+    }
+  }
+}

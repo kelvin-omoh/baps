@@ -1,0 +1,168 @@
+{
+  "kind": "collectionType",
+  "collectionName": "academic_staffs",
+  "info": {
+    "singularName": "academic-staff",
+    "pluralName": "academic-staffs",
+    "displayName": "AcademicStaff",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "college": {
+      "type": "string",
+      "required": true
+    },
+    "department": {
+      "type": "string",
+      "required": true
+    },
+    "telephone": {
+      "type": "biginteger",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "placeOfBirth": {
+      "type": "string",
+      "required": true
+    },
+    "nationality": {
+      "type": "string",
+      "required": true
+    },
+    "maritalStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Single",
+        "Married",
+        "Divorced"
+      ]
+    },
+    "childrenAges": {
+      "type": "string"
+    },
+    "spouseName": {
+      "type": "string"
+    },
+    "spouseAddress": {
+      "type": "string"
+    },
+    "numberOfChildren": {
+      "type": "integer"
+    },
+    "nextOfKinNameAddress": {
+      "type": "text"
+    },
+    "dateOfFirstAppointment": {
+      "type": "date"
+    },
+    "dateOfConfirmationAppointment": {
+      "type": "date"
+    },
+    "presentPosition": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfPresentPosition": {
+      "type": "date"
+    },
+    "educationalInstitutionAttended": {
+      "type": "string",
+      "required": true
+    },
+    "academicQualifications": {
+      "type": "text"
+    },
+    "professionalQualifications": {
+      "type": "text"
+    },
+    "postDoctorateTraining": {
+      "type": "text"
+    },
+    "scholarshipDistinctionAndAwards": {
+      "type": "string"
+    },
+    "workExperienceInTheUniversitySystem": {
+      "type": "text"
+    },
+    "workExperienceOutsideTheUniversitySystem": {
+      "type": "text"
+    },
+    "workExperienceInOtherTertiaryInstitutions": {
+      "type": "text"
+    },
+    "currentJobDescription": {
+      "type": "string",
+      "required": true
+    },
+    "administrativeAndManagementExperience": {
+      "type": "text"
+    },
+    "membershipOfProfessionalBodies": {
+      "type": "text"
+    },
+    "publications": {
+      "type": "text",
+      "required": true
+    },
+    "patentsDesigns": {
+      "type": "text"
+    },
+    "extracurricularActivities": {
+      "type": "string"
+    },
+    "conferencesAndWorkshopsAttendedAndPapersPresented": {
+      "type": "string"
+    },
+    "nameOfCollege": {
+      "type": "string"
+    },
+    "nameOfDepartment": {
+      "type": "string"
+    },
+    "personalData": {
+      "type": "text"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "recommendation": {
+      "type": "string"
+    },
+    "qualificationsWithDates": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "review_exercise_sheet_1": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::review-exercise-sheet1.review-exercise-sheet1",
+      "mappedBy": "academic_staff"
+    }
+  }
+}
